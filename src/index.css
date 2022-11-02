@@ -1,7 +1,10 @@
 :root {
-  --primary: rgb(34, 34, 34);
-  --textPrimary: whitesmoke;
-  --buttonPrimary: rgb(65, 65, 65);
+  --color-black: #000;
+  --color-dark: #212121;
+  --color-grey: #323232;
+  --color-cyan: #14FFEC;
+  --color-cyan-darker: #0D7377;
+  --color-light: #EEEEEE;
 }
 
 *,
@@ -40,7 +43,7 @@ code {
 
 
 .navbar {
-  background-color: var(--primary);
+  background-color: var(--color-black);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,11 +63,12 @@ a {
   display: flex;
   justify-content: center;
   width: 33vw;
+  font-size: 1.5rem;
 }
 
 .nav-button {
-  background-color: var(--primary);
-  color: var(--textPrimary);
+  background-color: inherit;
+  color: var(--color-light);
   border: none;
   font-size: 1.2em;
   border-radius: 5px;
@@ -74,10 +78,10 @@ a {
   align-items: center;
 }
 .nav-button:hover {
-  background-color: var(--buttonPrimary);
+  background-color: var(--color-grey)
 }
 
 .logo {
-  max-height: 30px;
-  color: white;
+  color: var(--color-cyan);
+  font-size: 4rem;
 }
