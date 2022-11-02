@@ -30,6 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  background-color: var(--color-dark);
 }
 
 code {
@@ -84,4 +85,48 @@ a {
 .logo {
   color: var(--color-cyan);
   font-size: 4rem;
+}
+
+/* HOME BOARD SELECIONT */
+
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  max-width: 1000px;
+  width: 80vw;
+  margin: 200px auto 30px;
+  gap: 0 20px;
+}
+
+.board-container {
+  max-height: 100%;
+  max-width: 300px;
+  margin: 15px auto;
+  position: relative;
+  place-self: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: .2s linear;
+}
+
+.board-name {
+  position: absolute;
+  color: var(--color-light);
+  font-weight: 900;
+  font-size: 3rem;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, 0);
+}
+
+.board-img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.board-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px var(--color-cyan)
 }
