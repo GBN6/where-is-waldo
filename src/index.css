@@ -2,7 +2,7 @@
   --color-black: #000;
   --color-dark: #212121;
   --color-grey: #323232;
-  --color-purple: #5800FF;
+  --color-purple: #8758FF;
   --color-purple-darker: #34315a;
   --color-light: #EEEEEE;
 }
@@ -30,7 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  background-color: var(--color-dark);
+  background-color: var(--color-grey);
 }
 
 code {
@@ -44,7 +44,7 @@ code {
 
 
 .navbar {
-  background-color: var(--color-black);
+  background-color: var(--color-dark);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,7 +99,6 @@ a {
 }
 
 .board-container {
-  max-height: 100%;
   max-width: 300px;
   margin: 15px auto;
   position: relative;
@@ -120,6 +119,7 @@ a {
 }
 
 .board-img {
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -128,5 +128,5 @@ a {
 
 .board-container:hover {
   transform: scale(1.1);
-  box-shadow: 0px 0px 10px var(--color-light)
+  box-shadow: 2px 2px 20px var(--color-black)
 }
