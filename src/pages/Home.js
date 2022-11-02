@@ -1,20 +1,28 @@
-import React from "react";
-import BoardCard from "../components/BoardCard";
-import ps1 from '../assets/boards/ps1.jpg'
-import ps2 from '../assets/boards/ps2.jpg'
-import ps3 from '../assets/boards/ps3.jpg'
-import ps4 from '../assets/boards/ps4.jpg'
+import React from 'react';
+import { Link } from "react-router-dom";
+import BoardCard from '../components/BoardCard';
 
+function Home(props) {
+  const { boardsData } = props;
 
-function Home() {
+  const boards = Object.keys(boardsData)?.map((number) => {
+    const board = boardsData[number];
+    const characters = board.characters;
+    const key = `level ${board.level} ${board.name}`;
+
+    return (
+      <Link to="/game" key={key}>
+        <BoardCard
+          img={board.img}
+          alt={`Level ${board.level}`}
+          name={board.name}
+        />
+      </Link>
+    );
+  });
 
   return (
-    <div className="home-container">
-      <BoardCard img={ps1} alt='PS1' name='PS1' />
-      <BoardCard img={ps2} alt='PS2' name='PS2' />
-      <BoardCard img={ps3} alt='PS3' name='PS3' />
-      <BoardCard img={ps4} alt='PS4' name='PS4' />
-    </div>
+    <div className='home-container'>{boards}</div>
   );
 }
 
