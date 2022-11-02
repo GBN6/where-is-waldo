@@ -1,3 +1,24 @@
+:root {
+  --primary: rgb(34, 34, 34);
+  --textPrimary: whitesmoke;
+  --buttonPrimary: rgb(65, 65, 65);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +26,58 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+/* NAVBAR HEADER */
+
+
+.navbar {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  min-height: 75px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-button-container {
+  display: flex;
+  justify-content: center;
+  width: 33vw;
+}
+
+.nav-button {
+  background-color: var(--primary);
+  color: var(--textPrimary);
+  border: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: ease-in-out 0.25s;
+  cursor: pointer;
+  align-items: center;
+}
+.nav-button:hover {
+  background-color: var(--buttonPrimary);
+}
+
+.logo {
+  max-height: 30px;
+  color: white;
 }
