@@ -67,7 +67,7 @@ const Navbar = (props) => {
                 </button>
               </Link>
             </div>
-            <h1 className="logo">Information</h1>
+            <h1 className="logo">INFORMATION</h1>
             <div className="nav-button-container">
               <button className="right-nav-button nav-button">
                 <Link style={{ color: "#FFF" }} to="/leaderboard">

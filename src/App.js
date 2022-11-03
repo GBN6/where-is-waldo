@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import boardsData from './BoardsData';
+import Leaderboard from './pages/Leaderboard';
+import Info from './pages/Info';
+import Game from './pages/Game';
 
 const App = () => {
   const [inGame, setInGame] = useState(false);
@@ -34,10 +37,43 @@ const App = () => {
               />
             }
           />
+          <Route
+            path='/leaderboard'
+            element={
+              <Leaderboard
+                setInGame={setInGame}
+                setInLeaderboard={setInLeaderboard}
+                setInHome={setInHome}
+                setInInfo={setInInfo}
+              />
+            }
+          />
+          <Route
+            path='/info'
+            element={
+              <Info
+                setInGame={setInGame}
+                setInLeaderboard={setInLeaderboard}
+                setInHome={setInHome}
+                setInInfo={setInInfo}
+              />
+            }
+          />
+          <Route
+            path='/game'
+            element={
+              <Game
+                setInGame={setInGame}
+                setInLeaderboard={setInLeaderboard}
+                setInHome={setInHome}
+                setInInfo={setInInfo}
+              />
+            }
+          />
         </Routes>
       </div>
     </Router>
   );
-}
+};
 
 export default App;
