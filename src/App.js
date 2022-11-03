@@ -12,6 +12,7 @@ const App = () => {
   const [inLeaderboard, setInLeaderboard] = useState(false);
   const [inHome, setInHome] = useState(false);
   const [inInfo, setInInfo] = useState(false);
+  const [boardNumber, setBoardNumber] = useState(0);
   const [allBoardsData, setAllBoardData] = useState(boardsData);
 
   return (
@@ -34,6 +35,7 @@ const App = () => {
                 setInLeaderboard={setInLeaderboard}
                 setInHome={setInHome}
                 setInInfo={setInInfo}
+                setBoardNumber={setBoardNumber}
               />
             }
           />
@@ -63,6 +65,8 @@ const App = () => {
             path='/game'
             element={
               <Game
+                boardNumber={boardNumber}
+                allBoardsData={allBoardsData}
                 setInGame={setInGame}
                 setInLeaderboard={setInLeaderboard}
                 setInHome={setInHome}

@@ -130,3 +130,9 @@ a {
   transform: scale(1.1);
   box-shadow: 2px 2px 20px var(--color-black)
 }
+
+/* GAME  */
+.game-board-img {
+  display: block;
+  width: 100%;
+}
