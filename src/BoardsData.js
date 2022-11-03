@@ -8,25 +8,78 @@ const boardsData = {
     level: 0,
     name: 'PS1',
     img: ps1,
-    characters: [],
+    characters: [
+      {
+        name: 'Cloud',
+        found: false,
+      },
+      {
+        name: 'Crash',
+        found: false,
+      },
+      {
+        name: 'PaRappa',
+        found: false,
+      },
+
+    ],
   },
   1: {
     level: 1,
     name: 'PS2',
     img: ps2,
-    characters: [],
+    characters: [
+      {
+        name: 'Prince',
+        found: false,
+      },
+      {
+        name: 'Ratchet',
+        found: false,
+      },
+      {
+        name: 'Tommy',
+        found: false,
+      },
+    ],
   },
   2: {
     level: 2,
     name: 'PS3',
     img: ps3,
-    characters: [],
+    characters: [
+      {
+        name: 'Cole',
+        found: false,
+      },
+      {
+        name: 'Dwarf Odin',
+        found: false,
+      },
+      {
+        name: 'Joel',
+        found: false,
+      },
+    ],
   },
   3: {
     level: 3,
     name: 'PS4',
     img: ps4,
-    characters: [],
+    characters: [
+      {
+        name: 'Arthur Morgan',
+        found: false,
+      },
+      {
+        name: 'Kratos',
+        found: false,
+      },
+      {
+        name: 'Nathan Drake',
+        found: false,
+      },
+    ],
   },
 };
 
