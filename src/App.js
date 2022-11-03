@@ -4,17 +4,36 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import boardsData from './BoardsData';
 
-function App() {
-
+const App = () => {
+  const [inGame, setInGame] = useState(false);
+  const [inLeaderboard, setInLeaderboard] = useState(false);
+  const [inHome, setInHome] = useState(false);
+  const [inInfo, setInInfo] = useState(false);
   const [allBoardsData, setAllBoardData] = useState(boardsData);
-
 
   return (
     <Router>
-      <Navbar />
-      <div class='main-container'>
+      <Navbar
+        inGame={inGame}
+        setInGame={setInGame}
+        inLeaderboard={inLeaderboard}
+        inHome={inHome}
+        inInfo={inInfo}
+      />
+      <div className='main-container'>
         <Routes>
-          <Route path='/' element={<Home boardsData={allBoardsData} />} />
+          <Route
+            path='/'
+            element={
+              <Home
+                boardsData={allBoardsData}
+                setInGame={setInGame}
+                setInLeaderboard={setInLeaderboard}
+                setInHome={setInHome}
+                setInInfo={setInInfo}
+              />
+            }
+          />
         </Routes>
       </div>
     </Router>
