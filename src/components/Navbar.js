@@ -1,9 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Character from "../Character";
 
 const Navbar = (props) => {
 
-  const {inGame, setInGame, inLeaderboard, inHome, inInfo} = props
+  const {inGame, setInGame, inLeaderboard, inHome, inInfo, characters} = props
+
+  let gameCharacters;
+
+  gameCharacters = characters.map((character) => {
+    return (
+      <Character
+        name={character.name}
+        found={character.found}
+        key={character.name}
+      />
+    );
+  });
 
   return (
       <div className="navbar">

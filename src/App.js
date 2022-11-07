@@ -14,10 +14,12 @@ const App = () => {
   const [inInfo, setInInfo] = useState(false);
   const [boardNumber, setBoardNumber] = useState(0);
   const [allBoardsData, setAllBoardData] = useState(boardsData);
+  const [characters, setCharacters] = useState([]);
 
   return (
     <Router>
       <Navbar
+        characters={characters}
         inGame={inGame}
         setInGame={setInGame}
         inLeaderboard={inLeaderboard}
