@@ -48,7 +48,7 @@ const Navbar = (props) => {
                 </button>
               </Link>
             </div>
-            <div className="characters-container">Character 1 Character 2 Character 3</div>
+            <div className="characters-container">{gameCharacters}</div>
             <div className="nav-button-container"></div>
           </>
         )}

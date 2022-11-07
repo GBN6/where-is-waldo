@@ -67,6 +67,8 @@ const App = () => {
             path='/game'
             element={
               <Game
+                characters={characters}
+                setCharacters={setCharacters}
                 boardNumber={boardNumber}
                 allBoardsData={allBoardsData}
                 setInGame={setInGame}
