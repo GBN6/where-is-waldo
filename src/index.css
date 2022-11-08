@@ -171,6 +171,41 @@ a {
   width: 100%;
 }
 
+/* CHARACTER DROPDOWN */
+.character-dropdown-menu {
+  width: 14rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--color-dark);
+  overflow: auto;
+}
+.character-dropdown-a {
+  color: var(--color-light);
+  padding: 0.75rem;
+  display: block;
+  text-decoration: inherit;
+}
+.character-dropdown-div {
+  display: flex;
+  align-items: center;
+}
+.character-dropdown-img {
+  width: 1.5rem;
+  object-fit: contain;
+  margin-right: 0.5rem;
+  height: 1.5rem;
+  max-width: 100%;
+  display: block;
+}
+
+.absolute {
+  position: absolute;
+}
+.hidden {
+  display: none;
+}
+
+
  /* INFO  */
  
  .info-container {
